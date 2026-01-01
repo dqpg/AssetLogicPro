@@ -2,62 +2,67 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>AssetLogicPro | 全球资产逻辑研究</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #020617; color: #f8fafc; }
-        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        body { background-color: #020617; color: #f8fafc; -webkit-font-smoothing: antialiased; }
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); }
         .accent-gradient { background: linear-gradient(90deg, #64ffda, #48bb78); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        /* 优化长单词或链接在手机端不溢出 */
+        * { overflow-wrap: break-word; }
     </style>
 </head>
-<body class="min-h-screen font-sans">
-    <nav class="p-6 border-b border-slate-800 flex justify-between items-center glass sticky top-0 z-50">
-        <div class="text-2xl font-bold tracking-tighter uppercase">Asset<span class="text-emerald-400">Logic</span>Pro</div>
-        <div class="space-x-8 text-sm font-medium text-slate-400">
+<body class="min-h-screen font-sans antialiased">
+    <nav class="p-4 md:p-6 border-b border-slate-800 flex flex-col md:flex-row justify-between items-center glass sticky top-0 z-50 gap-4">
+        <div class="text-xl md:text-2xl font-bold tracking-tighter uppercase">
+            Asset<span class="text-emerald-400">Logic</span>Pro
+        </div>
+        <div class="flex space-x-4 md:space-x-8 text-xs md:text-sm font-medium text-slate-400">
             <a href="#" class="hover:text-emerald-400 transition">研究报告</a>
             <a href="#" class="hover:text-emerald-400 transition">数据中心</a>
             <a href="#" class="hover:text-emerald-400 transition">关于我们</a>
         </div>
     </nav>
 
-    <header class="py-24 px-6 text-center">
-        <div class="inline-block px-4 py-1 border border-emerald-500/30 rounded-full text-emerald-400 text-xs font-mono mb-6">
+    <header class="py-16 md:py-24 px-6 text-center">
+        <div class="inline-block px-3 py-1 border border-emerald-500/30 rounded-full text-emerald-400 text-[10px] md:text-xs font-mono mb-6 tracking-widest">
             NODE: LOS ANGELES // STATUS: ACTIVE
         </div>
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight">
-            穿透市场迷雾 <br><span class="accent-gradient">重塑全球交易逻辑</span>
+        <h1 class="text-3xl md:text-6xl font-extrabold mb-6 leading-tight">
+            穿透市场迷雾 <br class="hidden md:block"><span class="accent-gradient">重塑全球交易逻辑</span>
         </h1>
-        <p class="text-slate-400 max-w-2xl mx-auto text-lg mb-10">
-            专注于 A股 / 港股 / 美股 的底层规则拆解、资产定价逻辑与量化投研分析。为独立投资者提供机构级的视角。
+        <p class="text-slate-400 max-w-2xl mx-auto text-base md:text-lg mb-10 leading-relaxed">
+            专注于 A股 / 港股 / 美股 的底层规则拆解与资产定价逻辑。
+            <span class="block mt-2 text-sm text-slate-500">为独立投资者提供机构级的视角。</span>
         </p>
     </header>
 
-    <main class="max-w-4xl mx-auto px-6 pb-24">
-        <h2 class="text-xl font-bold mb-8 flex items-center">
-            <span class="w-8 h-px bg-emerald-500 mr-4"></span> 最新研报
+    <main class="max-w-4xl mx-auto px-4 md:px-6 pb-24">
+        <h2 class="text-lg font-bold mb-6 flex items-center">
+            <span class="w-6 h-px bg-emerald-500 mr-3"></span> 最新研报
         </h2>
         
-        <article class="card glass p-8 rounded-2xl hover:border-emerald-500/50 transition cursor-pointer group">
+        <article class="card glass p-6 md:p-8 rounded-xl md:rounded-2xl hover:border-emerald-500/50 transition cursor-pointer group">
             <div class="flex justify-between items-start mb-4">
-                <span class="text-xs font-mono text-emerald-500 tracking-widest">DEEP RESEARCH</span>
-                <span class="text-xs text-slate-500">2025.01.01</span>
+                <span class="text-[10px] font-mono text-emerald-500 tracking-widest uppercase">Deep Research</span>
+                <span class="text-[10px] text-slate-500">2025.01.01</span>
             </div>
-            <h3 class="text-2xl font-bold mb-4 group-hover:text-emerald-400 transition">
+            <h3 class="text-xl md:text-2xl font-bold mb-4 group-hover:text-emerald-400 transition leading-snug">
                 跨越边界：全球三大市场（A/H/美）交易底层逻辑对比与实战指南
             </h3>
-            <p class="text-slate-400 leading-relaxed mb-6">
-                为什么 T+0 与 T+1 的区别不仅仅是时间？为什么涨跌幅限制会改变博弈结构？在这篇 1500 字的深度解析中，我们拆解了全球主要交易市场的盈利底层密码...
+            <p class="text-sm md:text-base text-slate-400 leading-relaxed mb-6">
+                为什么 T+1 与 T+0 的区别不仅仅是时间？为什么涨跌幅限制会改变博弈结构？我们拆解了全球主要交易市场的盈利底层密码...
             </p>
-            <div class="flex items-center text-sm font-bold text-emerald-400">
-                READ FULL ARTICLE <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+            <div class="flex items-center text-xs md:text-sm font-bold text-emerald-400">
+                阅读全文 <span class="ml-2 group-hover:translate-x-2 transition-transform">→</span>
             </div>
         </article>
     </main>
 
-    <footer class="p-12 border-t border-slate-800 text-center text-slate-500 text-sm">
+    <footer class="p-8 md:p-12 border-t border-slate-800 text-center text-slate-500 text-[10px] md:text-xs">
         <p>© 2025 AssetLogicPro. Global Quantitative Research Center.</p>
-        <p class="mt-2 text-xs opacity-50">数据驱动决策 · 逻辑创造价值</p>
+        <p class="mt-2 opacity-50 text-[9px] uppercase tracking-widest">数据驱动决策 · 逻辑创造价值</p>
     </footer>
 </body>
 </html>
